@@ -28,7 +28,14 @@ What do the following commands do:
 `ls -t`  
 `ls -Glp`  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > ls -> Shows content of directory
+ls - a -> Shows all files (including hidden files that start with a dot)
+ls -l -> Shows detail about files in long format
+ls -lh -> Shows detail of unit formats
+ls -lah -> Sama as above but including all files
+ls -t -> Sorts by time modified (most recently modified first) then by 
+lexographical order
+ls - Glp -> enable colorized output and writes a / after directories
 
 ---
 
@@ -36,7 +43,13 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > -G -> Allows colorized output
+-F -> Displays a slash after each pathname that is a director, an 
+asterisk
+after each that is an executable and an @ after symbolic links
+-1 -> forces one entry per line
+-u -> Sorts by time of last access
+-lT -> Displays detailed time information about files 
 
 ---
 
@@ -44,7 +57,11 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+> > xargs builds a list of arguments that can be used by other
+utilities using pipes to create powerful commands. For example, I could
+type $ find . - name "*.txt" - type f - print | xarges /bin/rm - f. This
+would delete all text files in the current directory.
+
 
  
 
