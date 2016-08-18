@@ -18,7 +18,10 @@ def donuts(count):
     >>> donuts(99)
     'Number of donuts: many'
     """
-    raise NotImplementedError
+    if count >=10:
+        return 'Number of donuts: many'
+    else:
+        return 'Number of donuts: '+str(count)
 
 
 def both_ends(s):
@@ -37,7 +40,10 @@ def both_ends(s):
     >>> both_ends('xyz')
     'xyyz'
     """
-    raise NotImplementedError
+    if len(s) <= 2:
+        return ''
+    else:
+        return s[0:2] + s[len(s) - 2] + s[len(s) - 1]
 
 
 def fix_start(s):
@@ -56,7 +62,7 @@ def fix_start(s):
     >>> fix_start('donut')
     'donut'
     """
-    raise NotImplementedError
+    return s[0] + s[1:].replace(s[0], '*')
 
 
 def mix_up(a, b):
@@ -74,7 +80,7 @@ def mix_up(a, b):
     >>> mix_up('pezzy', 'firm')
     'fizzy perm'
     """
-    raise NotImplementedError
+    return b[0:2] + a[2:] + ' ' + a[0:2] + b[2:]
 
 
 def verbing(s):
@@ -91,7 +97,15 @@ def verbing(s):
     >>> verbing('do')
     'do'
     """
-    raise NotImplementedError
+
+    def verbing(s):
+        if len(s) >= 3:
+            if s[-3:] == 'ing':
+                return s + 'ly'
+            else:
+                return s + 'ing'
+        else:
+            return s
 
 
 def not_bad(s):
@@ -111,7 +125,12 @@ def not_bad(s):
     >>> not_bad("It's bad yet not")
     "It's bad yet not"
     """
-    raise NotImplementedError
+
+    def not_bad(s):
+        if s.find('bad') > s.find('not'):
+            return s[0:s.find('not')] + 'good'
+        else:
+            return s
 
 
 def front_back(a, b):
@@ -130,4 +149,14 @@ def front_back(a, b):
     >>> front_back('Kitten', 'Donut')
     'KitDontenut'
     """
-    raise NotImplementedError
+
+    def split_strng(x):
+        if len(x) % 2 == 0:
+            x_front = x[0:len(x) / 2]
+            x_back = x[len(x) / 2:len(x)]
+        else:
+            x_front = x[0:len(x) / 2 + 1]
+            x_back = x[len(x) / 2 + 1:len(x)]
+        return x_front, x_back
+
+    return split_strng(a)[0] + split_strng(b)[0] + split_strng(a)[1] + split_strng(b)
