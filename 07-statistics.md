@@ -48,20 +48,30 @@ $ git clone https://github.com/AllenDowney/ThinkStats2.git
 
 *Include your Python code, results and explanation (where applicable).*
 
+>>> For all exercises and code, see ThinkStats2/code folder for my solutions with the relevant chapter
+
 ###Q1. [Think Stats Chapter 2 Exercise 4](statistics/2-4-cohens_d.md) (effect size of Cohen's d)  
 Cohen's D is an example of effect size.  Other examples of effect size are:  correlation between two variables, mean difference, regression coefficients and standardized test statistics such as: t, Z, F, etc. In this example, you will compute Cohen's D to quantify (or measure) the difference between two groups of data.   
 
 You will see effect size again and again in results of algorithms that are run in data science.  For instance, in the bootcamp, when you run a regression analysis, you will recognize the t-statistic as an example of effect size.
 
+>>> [Relevant notebook](ThinkStats2/code/chap02ex.ipynb)
+
 ###Q2. [Think Stats Chapter 3 Exercise 1](statistics/3-1-actual_biased.md) (actual vs. biased)
 This problem presents a robust example of actual vs biased data.  As a data scientist, it will be important to examine not only the data that is available, but also the data that may be missing but highly relevant.  You will see how the absence of this relevant data will bias a dataset, its distribution, and ultimately, its statistical interpretation.
+
+>>> [Relevant notebook](ThinkStats2/code/chap03ex.ipynb)
+
 
 ###Q3. [Think Stats Chapter 4 Exercise 2](statistics/4-2-random_dist.md) (random distribution)  
 This questions asks you to examine the function that produces random numbers.  Is it really random?  A good way to test that is to examine the pmf and cdf of the list of random numbers and visualize the distribution.  If you're not sure what pmf is, read more about it in Chapter 3.  
 
+>>> [Relevant notebook](ThinkStats2/code/chap04ex.ipynb)
+
 ###Q4. [Think Stats Chapter 5 Exercise 1](statistics/5-1-blue_men.md) (normal distribution of blue men)
 This is a classic example of hypothesis testing using the normal distribution.  The effect size used here is the Z-statistic. 
 
+>>> [Relevant notebook](ThinkStats2/code/chap05ex.ipynb)
 
 
 ###Q5. Bayesian (Elvis Presley twin) 
@@ -70,14 +80,20 @@ Bayes' Theorem is an important tool in understanding what we really know, given 
 
 Elvis Presley had a twin brother who died at birth.  What is the probability that Elvis was an identical twin? Assume we observe the following probabilities in the population: fraternal twin is 1/125 and identical twin is 1/300.  
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> P(identical twins & twin brother) = P(identical twins)P(both boys|identical twins) = 1/2 * (1/300)
+>> P(fraternal twins & twin brother) = P(fraternal twins)P(both boys|fraternal twins) = 1/4 * (1/125)
+>> P(identical twins|twin brother) = P(identical twins & twin brother) / P(twin brother)
+>> = ((1/2)*(1/300))/((1/2*1/300)+(1/4*1/125))
+>> = 5/11
 
 ---
 
 ###Q6. Bayesian &amp; Frequentist Comparison  
 How do frequentist and Bayesian statistics compare?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Frequentists look at the frequency of data in history to come to 
+conclusions whereas Bayesian statistics take a prior hypothesis into
+account, then update that probability in light of new data
 
 ---
 
